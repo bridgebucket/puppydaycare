@@ -12,3 +12,10 @@ body {
     margin: 0px;
     padding: 0px;
 }
+
+p, h1 {
+    color: rgb(240, 240, 240);
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    margin: 0px;
+}
