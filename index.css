@@ -3,27 +3,87 @@
     --card-color: rgb(23, 23, 23);
 }
 
-#FUCKINGSHITBALLS {
-    overflow: scroll;
-    position: relative;
+html {
+    background-color: rgb(20, 20, 20);
+    scroll-snap-type: y mandatory;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.container section {
+    scroll-snap-align: start;
 }
 
 .splash {
-    padding-top: 98.5vh;
-    padding-bottom: 10vh;
-    z-index: 5;
+    background: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
 }
 
-body {
-    align-items: center;
-    background-color: var(--bg-color);
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    margin: 0px;
-    padding: 0px;
+img.RAMIELSASS {
+    position: absolute;
+    height: 294px;
+    left: 49%;
+    top: 8%;
 }
-  
+
+img.waog {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 596px;
+}
+
+.main {
+    background-image: radial-gradient(circle at 15% 95%, rgba(255,255,255,0) 12%, rgba(20, 20, 20, 1) 50%), url(images/cardbg.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-size: 40%;
+    
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fuckinggradient {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    height: 10vh;
+    background-position-y: 0%;
+    background-image: linear-gradient(rgba(255,255,255, 1) 15%, rgba(20, 20, 20, 0) 100%);
+}
+
+.footfet {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: 5%;
+}
+
+.dyarrow {
+    border: solid black;
+    border-width: 0 6px 6px 0;
+    border-radius: 5px;
+    padding: 15px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+
+    position: absolute;
+    margin: 0;
+    margin-right: -50%;
+    top: 93%;
+    left: 50%;
+    z-index: 10;
+}
+
 #cards {
     display: flex;
     flex-wrap: wrap;
@@ -35,11 +95,6 @@ body {
     margin: auto;
     width: 50%;
     padding: 20px;
-    padding-bottom: 40vh;
-}
-
-#cards:hover > .card > .card-border {
-    opacity: 1;
 }
 
 .card {
@@ -51,42 +106,6 @@ body {
     flex-direction: column;
     position: relative;
     width: 300px;
-}
-
-.card:hover::before {
-    opacity: 1;
-}
-
-.card::before,
-.card > .card-border {
-    border-radius: inherit;
-    content: "";
-    height: 100%;
-    left: 0px;
-    opacity: 0;
-    position: absolute;
-    top: 0px;
-    transition: opacity 500ms;
-    width: 100%;
-    z-index: 2;
-}
-
-.card::before {
-    background: radial-gradient(
-        800px circle at var(--mouse-x) var(--mouse-y),
-        rgba(255, 255, 255, 0.06),
-        transparent 40%
-    );
-    z-index: 3;
-}
-
-.card > .card-border {
-    background: radial-gradient(
-        800px circle at var(--mouse-x) var(--mouse-y),
-        rgba(255, 255, 255, 0.3),
-        transparent 40%
-    );
-    z-index: 1;
 }
 
 .card > .card-content {
@@ -108,6 +127,14 @@ h1, h2, h3, h4, h5, span {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     margin: 0px;
+}
+
+h3 {
+    padding-top: 20px;
+}
+
+h4 {
+    padding-top: 10px;
 }
 
 .card-image {
@@ -146,7 +173,7 @@ h1, h2, h3, h4, h5, span {
 
 /* IP COPIED POPUP */
 
-.card .popuptext{
+.card .popuptext {
     visibility: hidden;
     width: 190px;
     background-color: #ffbbff;
@@ -155,10 +182,10 @@ h1, h2, h3, h4, h5, span {
     border-radius: 6px;
     padding: 8px 0;
     position: absolute;
-    z-index: 6;
-    bottom: 125%;
+    bottom: 110%;
     left: 50%;
     margin-left: -80px;
+    z-index: 6;
 }
 
 .card .popuptext::after {
@@ -177,7 +204,7 @@ h1, h2, h3, h4, h5, span {
     -webkit-animation: fadeInOut 3s linear 1 forwards;
     animation: fadeInOut 3s linear 1 forwards;
 }
-  
+
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeInOut {
     0% {
@@ -193,7 +220,7 @@ h1, h2, h3, h4, h5, span {
       opacity: 0;
     }
 }
-  
+
 @keyframes fadeInOut {
     0% {
       opacity: 0;
