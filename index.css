@@ -1,0 +1,237 @@
+:root {
+    --bg-color: rgb(20, 20, 20);
+    --card-color: rgb(23, 23, 23);
+}
+
+html {
+    background-color: rgb(20, 20, 20);
+    scroll-snap-type: y mandatory;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.container section {
+    scroll-snap-align: start;
+}
+
+.splash {
+    background: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+}
+
+img.RAMIELSASS {
+    position: absolute;
+    height: 294px;
+    left: 49%;
+    top: 8%;
+}
+
+img.waog {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 596px;
+}
+
+.main {
+    background-image: radial-gradient(circle at 15% 95%, rgba(255,255,255,0) 12%, rgba(20, 20, 20, 1) 50%), url(images/cardbg.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-size: 40%;
+    
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fuckinggradient {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    height: 10vh;
+    background-position-y: 0%;
+    background-image: linear-gradient(rgba(255,255,255, 1) 15%, rgba(20, 20, 20, 0) 100%);
+}
+
+.footfet {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: 5%;
+}
+
+.dyarrow {
+    border: solid black;
+    border-width: 0 6px 6px 0;
+    border-radius: 5px;
+    padding: 15px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+
+    position: absolute;
+    margin: 0;
+    margin-right: -50%;
+    top: 93%;
+    left: 50%;
+    z-index: 10;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;  
+    max-width: 916px;
+    width: calc(100% - 20px);
+    padding: 0;
+    padding-bottom: 10vh;
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    height: 260px;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+}
+
+.card > .card-content {
+    background-color: var(--card-color);
+    border-radius: inherit;
+    height: calc(100% - 2px);
+    margin: 1px;
+    position: relative;
+    width: calc(100% - 2px);    
+    z-index: 2;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, span {
+    color: rgb(240, 240, 240);
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    margin: 0px;
+}
+
+h3 {
+    padding-top: 20px;
+}
+
+h4 {
+    padding-top: 10px;
+}
+
+.card-image {
+    align-items: center;
+    display: flex;
+    height: 140px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-info-wrapper {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    padding: 0px 20px;
+}
+
+.card-text-info {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+}
+
+.card-title > h3 {
+    font-size: 1.1em;
+    line-height: 20px;
+}
+
+.card-title > h4 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85em;
+    margin-top: 8px;
+}
+
+
+/* IP COPIED POPUP */
+
+.card .popuptext {
+    visibility: hidden;
+    width: 190px;
+    background-color: #ffbbff;
+    color: #000000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -80px;
+    z-index: 6;
+}
+
+.card .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #ffbbff transparent transparent transparent;
+}
+
+.card .show {
+    visibility: visible;
+    -webkit-animation: fadeInOut 3s linear 1 forwards;
+    animation: fadeInOut 3s linear 1 forwards;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
